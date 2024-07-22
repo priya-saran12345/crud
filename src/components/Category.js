@@ -17,10 +17,10 @@ const Category = () => {
 
   // onclick of the buttons 
   const showdetails = (id) => {
-    navigate('/dashboard/details/' + id)
+    navigate('/details/' + id)
   }
   const edit = (id) => {
-    navigate('/dashboard/edit/' + id)
+    navigate('/edit/' + id)
   }
   const deleteelem = (id, imageurl) => {
     if (
