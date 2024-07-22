@@ -12,7 +12,7 @@ function App(){
 
 const router=createBrowserRouter(
 [
-  {path:"dashboard",loader:isLogin, element:<Layout />,children:[
+  {path:"",loader:isLogin, element:<Layout />,children:[
     {path:"", element:<Category/>},
     
     {path:"category", element:<Category/>},
