@@ -73,7 +73,7 @@ const Login = () => {
         setseeloader(false)
         console.log(seeloader)
 
-        navigate('/dashboard')
+        navigate('/')
       }).catch(err => {
         sethaserr(true)
         seterror(err.message)
