@@ -106,7 +106,7 @@ const Login = () => {
 
     }
 
-     {!seeloader&& !haserr&& <div className={`container w-25  py-3  rounded ${style.inner}`}>
+     {!seeloader&& <div className={`container w-25  py-3  rounded ${style.inner}`}>
         <h2 className='text-center'>Login</h2>
         <form onSubmit={handlesubmit}>
         {/* //mail id input field */}
