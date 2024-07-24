@@ -41,11 +41,11 @@ const Login = () => {
     }
     else if (data.email.length == 0) {
       err.mail = 'email is required'
-      setvalid(true)
+      setvalid(false)
     }
     else if (!emailRegex.test(data.email)) {
       err.mail = "enter the correct mail "
-      setvalid(true)
+      setvalid(false)
 
     }
 
