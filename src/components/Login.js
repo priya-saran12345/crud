@@ -73,7 +73,7 @@ const Login = () => {
         setseeloader(false)
         console.log(seeloader)
 
-        navigate('/dashboard')
+        navigate('/ ')
       }).catch(err => {
         sethaserr(true)
         seterror(err.message)
@@ -150,7 +150,7 @@ export default Login
 // {path:"login", element:<Login/>},
 // {path:"signup", element:<Signup/>},
 // {path:"", element:<Layout />,children:[
-//   {path:"dashboard", element:<Category/>},
+//   {path:" ", element:<Category/>},
 //   {path:"category", element:<Category/>},
 //   {path:"addcategory", element:<Addcategory/>},
 //   {path:"details/:id", element:<Details/>},
