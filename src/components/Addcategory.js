@@ -26,30 +26,26 @@ const Addcategory = () => {
             return;
         }
 
-        const fD = new FormData();
-        fD.append('description', product);
-        fD.append('mrp', price);
-        fD.append('photo', image);
+const fD = new FormData();
+fD.append('description', product);
+fD.append('mrp', price);
+fD.append('photo', image); // Ensure this is the file object
 
-        axios.post('https://restful-api-five.vercel.app/product', fD, {
-            headers: {
-                Authorization: 'Bearer ' + localStorage.getItem('token')
-            }
-        })
-        .then(result => {
-            console.log(result.data);
-            setseeimage(img);
-            setisloading(false);
-            navigate('/category');
-        })
-        .catch(err => {
-            console.error("API call error:", err.response || err);
-            sethaserr(true);
-            seterror(err.response ? err.response.data.error : "An error occurred");
-            setisloading(false);
-            setseeimage(img);
-        });
+axios.post('https://restful-api-five.vercel.app/product', fD, {
+    headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        // You might not need to set 'Content-Type' here; let the browser set it automatically.
     }
+})
+.then(result => {
+    console.log(result.data);
+    navigate('/category');
+})
+.catch(err => {
+    console.error('Error in POST request:', err);
+    sethaserr(true);
+    seterror(err.message);
+});
 
     return (
         <>
