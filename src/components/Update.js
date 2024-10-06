@@ -59,7 +59,7 @@ let id=params.id
     console.log(result.data)
     setisloading(false)
     setseeimage(img)
-    navigate('/dashboard/category')
+    navigate('/category')
     
     
     
