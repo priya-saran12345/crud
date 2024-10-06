@@ -39,7 +39,7 @@ setisloading(true)
 console.log(result.data)
 setseeimage(img)
 setisloading(false)
-navigate('/dashboard/category')
+navigate('/category')
 
 
 
