@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+
+    padding: 0;
+}
+.nav{width: 100%;
+    margin: auto;
+    padding: 15px 30px;
+    background-color:rgb(216, 216, 235);
+    border-bottom: 2px solid rgb(169, 166, 166);
+
+}
+.Link {
+    text-decoration: none;
+    font-size: 18px;
+    margin:0 20px;
+    color: grey;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.load{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+.h1{
+    color: brown;
+}
+.image{
+    height: 30vh;
+}
+.add{
+    background-color: rgb(218, 214, 214);
+    border: 1px solid grey;
+}
+.signup{
+    margin-top: 20vh;
+}
+.inner{
+    background-color: antiquewhite ;
+     border :1px solid rgb(161, 10, 40);
+}
