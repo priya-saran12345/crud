@@ -26,34 +26,38 @@ const Addcategory = () => {
             return;
         }
 
-        const fD = new FormData();
-        fD.append('description', product);
-        fD.append('mrp', price);
-        fD.append('photo', image); // Ensure this is the file object
+const fD = new FormData();
+fD.append('description', product);
+fD.append('mrp', price);
+fD.append('photo', image); // Ensure this is the file object
+           // {
+    // headers: {
+    //     'Authorization': 'Bearer ' + localStorage.getItem('token'),
+    //     // You might not need to set 'Content-Type' here; let the browser set it automatically.
+    // }
+// }
 
-        axios.post('https://restful-api-five.vercel.app/product', fD)
-            .then(result => {
-                console.log(result.data);
-                navigate('/category');
-            })
-            .catch(err => {
-                console.error('Error in POST request:', err);
-                sethaserr(true);
-                seterror(err.message);
-                setisloading(false);
-            });
-    };
+axios.post('https://restful-api-five.vercel.app/product', fD           )
+.then(result => {
+    console.log(result.data);
+    navigate('/category');
+})
+.catch(err => {
+    console.error('Error in POST request:', err);
+    sethaserr(true);
+    seterror(err.message);
+});
 
     return (
         <>
-            <h2 className={`${style.h1} text-center my-4`}>Add a new Product</h2>
+            <h2 className={${style.h1} text-center my-4}>Add a new Product</h2>
             {isloading && 
                 <div className='container w-50 d-flex justify-content-center'>
                     <img src={loader} className={style.load} alt='finding' />
                 </div>
             }
             {!isloading && 
-                <div className={`container w-25 rounded py-3 my-4 d-flex justify-content-center ${style.add}`}>
+                <div className={container w-25 rounded py-3 my-4 d-flex justify-content-center ${style.add}}>
                     <form onSubmit={submithandler}>
                         <input 
                             type='text' 
