@@ -31,12 +31,14 @@ fD.append('description', product);
 fD.append('mrp', price);
 fD.append('photo', image); // Ensure this is the file object
 
-axios.post('https://restful-api-five.vercel.app/product', fD, {
-    headers: {
-        'Authorization': 'Bearer ' + localStorage.getItem('token'),
-        // You might not need to set 'Content-Type' here; let the browser set it automatically.
-    }
-})
+axios.post('https://restful-api-five.vercel.app/product', fD, 
+           // {
+    // headers: {
+    //     'Authorization': 'Bearer ' + localStorage.getItem('token'),
+    //     // You might not need to set 'Content-Type' here; let the browser set it automatically.
+    // }
+// }
+          )
 .then(result => {
     console.log(result.data);
     navigate('/category');
